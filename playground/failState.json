@@ -1,0 +1,8 @@
+{
+    "FailState": {
+        "Comment": "This state will stop state machine and mark it as failed",
+        "Type": "Fail",
+        "Cause": "This is the error description",
+        "Error": "SomeException"
+    }
+}

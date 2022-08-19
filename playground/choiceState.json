@@ -1,0 +1,35 @@
+// it allows us to create branching logic
+{
+    "ChooseColor":{
+        "Type": "Choice",
+        "Choices": [ // array of condtions to redirect to another state
+            {
+                "Variable": "$.color", // comparisen method
+                "StringEquals": "blue",
+                "Next": "Blue"
+            },
+            {
+                "Variable": "$.color",
+                "StringEquals": "pink",
+                "Next": "Pink"
+            }
+        ],
+        "Default": "Blue" // default state if non of the condition is true
+    }
+}
+
+// Note: We can not use "End" feild inside it, so we can use it in subsequent state.
+
+
+// Other comparicen operators
+
+// StringEquals
+// NumericEquals
+// BooleanEquals
+// TimestampEquals
+
+// NumericGraterThan, NumericGraterThankEquals, NumericLessThan, NumericLessThanEquals
+
+// likewice, for String, Timestamp
+
+// Further we can alsouse, logic operators {And, Or, Not}

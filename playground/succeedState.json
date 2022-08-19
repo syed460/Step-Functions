@@ -1,0 +1,8 @@
+{
+    "SucceedState": {
+        "Type": "Succeed"
+    }
+}
+
+//"This state stops the exicution of the state machine marking as sucessfull"
+// and it does not contain any other feild

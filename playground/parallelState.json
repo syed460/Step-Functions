@@ -1,0 +1,11 @@
+{
+    "ParellelState": {
+        "Type": "Parallel",
+        "Branches": [
+            {
+                "StartsAt": "A1",
+                "State": 
+            }
+        ]
+    }
+}
