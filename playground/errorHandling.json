@@ -1,0 +1,44 @@
+// error handling option
+
+//Predifined Error Codes
+
+// State.ALL == A wild card that matches any error Name
+// State.Timeout == When timeOut occors
+// State.TaskFaild == When a Task-state fails during execution
+// States.Permission === when a Task-State had insufficient permission
+
+// Retriers For Task-State and Parallel-State
+
+{
+"someState": {
+    "Comment": "This can be Task or Parelllal State",
+    "Type": "Task",
+    "Resource": "arn of the lambda",
+    "Retry": [{
+        "ErrorEquals": ["State.Timeout", "MyCustomError"],
+        "IntervalSeconds": 1, // default value is 1 second
+        "MaxAttemts": 3,
+        "BackoffRate": 2.0
+    }]
+}
+}
+
+{
+    "SomeState": {
+        "Comment": "This can be Task or Parellal State",
+        "Type": "Task",
+        "Resource": "arn of the lambda",
+        "Catch": [
+            {
+            "ErrorEquals": ["State.Timeout", "MyCustomError"],
+            "Next": "HandleErrorState",
+            "ResultPath": "$.result"
+        },
+        {
+            "ErrorEquals": ["State.All"],
+            "Next": "UnhandleErrorState"
+        }
+
+    ]
+    }
+}

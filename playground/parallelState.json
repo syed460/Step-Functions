@@ -4,8 +4,16 @@
         "Branches": [
             {
                 "StartsAt": "A1",
-                "State": 
+                "States": {
+                    "A1": {},
+                    "A2": {
+                        "End": true
+                    }
+                }
             }
         ]
     }
 }
+
+// each braches are treated as indipendent state machine, hence firstState and lastState should be defined
+// 

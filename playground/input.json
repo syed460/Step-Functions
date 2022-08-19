@@ -1,0 +1,11 @@
+{
+    "Comment": "PayLoad for the state machine",
+    "lambda": {
+        "Operation": "add",
+        "input": {
+            "number1": 5,
+            "number2": 3
+        }
+    },
+    "moreData": "abcd"
+}

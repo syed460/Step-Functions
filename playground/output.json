@@ -1,0 +1,7 @@
+{
+    "name": "state name",
+    "output": {
+        "statusCode": 200,
+        "body": "8"
+    }
+}
